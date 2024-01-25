@@ -10,12 +10,8 @@ function calc(num1: number, num2: number): number {
   return num1 + num2;
 }
 
-function customError(): void {
+function customError(): never {
   throw new Error('Error');
 }
-
-showMessage('Hello, TypeScript!');
-const result = calc(5, 10);
-customError();
 
 export {};

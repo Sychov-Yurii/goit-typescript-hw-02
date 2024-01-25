@@ -3,21 +3,18 @@
 */
 
 
-interface ComponentProps {
+interface IProps {
   title: string;
 }
 
-class Component<T extends ComponentProps> {
+class Component <T> {
   constructor(public props: T) {}
 }
 
-class Page extends Component<{ title: string }> {
+class Page extends Component<IProps> {
   pageInfo() {
     console.log(this.props.title);
   }
 }
-
-const pageInstance = new Page({ title: 'Example Page' });
-pageInstance.pageInfo();
 
 export {};
